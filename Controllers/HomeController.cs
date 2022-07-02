@@ -18,6 +18,16 @@ namespace RedStore.Controllers
             return View();
         }
 
+        public IActionResult Form(string fname, string lname, string email, string phNo, string message)
+        {
+            ViewBag.message = "";
+            if(fname != null && lname != null && email != null && phNo != null && message != null)
+            {
+                ViewBag.message = "Data submitted successfully";
+            }
+            return View();
+        }
+
         public IActionResult ProductDetails()
         {
             return View();
